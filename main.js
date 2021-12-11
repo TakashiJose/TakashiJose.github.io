@@ -10,7 +10,7 @@ var config = {
     },
     scene: {
         preload: preload,
-        create: create
+        create: main_scene
     }
 };
 
@@ -20,12 +20,12 @@ function preload ()
 {
     //this.load.setBaseURL('http://labs.phaser.io');
 
-    this.load.image('sky', 'black_background.png');
-    this.load.image('logo', 'assets/sprites/phaser3-logo.png');
-    this.load.image('red', 'assets/particles/red.png');
+    this.load.image('sky', 'img/black_background.png');
+    this.load.image('logo', 'img/murkle2.png');
+    this.load.image('red', 'img/murkle2.png');
 }
 
-function create ()
+function main_scene ()
 {
     this.add.image(400, 300, 'sky');
 
@@ -38,7 +38,8 @@ function create ()
     });
 
     var logo = this.physics.add.image(400, 100, 'logo');
-
+    
+    //X,Y
     logo.setVelocity(100, 200);
     logo.setBounce(1, 1);
     logo.setCollideWorldBounds(true);
