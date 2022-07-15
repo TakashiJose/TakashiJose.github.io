@@ -14,6 +14,20 @@ html {
     line-height: 1.75em;
 }
 
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+:root{
+    font-size:16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+}
+
 header {
     position: relative;
     text-align: center;
@@ -32,3 +46,4 @@ header.major h1:after {
     position: relative;
     width: 4em;
 }
+
