@@ -6,15 +6,21 @@
 }
 
 :root {
-  --color-primary: #85E3FF;
-  --color-secondary: white;
+  --color-primary: #579ABE;
+  --color-secondary: #3582B8;
   --color-black: black;
-  --color-white: white;
-  --color-grey: #DCD3FF;
-  --color-green: #AFF828;
-  --color-red: #FFABAB;
+  --color-white: #FBE4FF;
+  --color-grey: grey;
+  --color-green: #03C03C;
+  --color-red: #C23B2300000000;
+  --color-yellow: #EADA52;
+  --color-blue: #6EB5FF;
   --br-sm-2: 14px;
   --box-shadow: 0 3 px 15px rgba(0,0,0,.2);
+}
+
+html {
+  background-color: var(--color-secondary);
 }
 
 body {
@@ -137,12 +143,18 @@ section {
   color: var(--color-black);
   pointer-events: none;
 }
+.controls .control:hover {
+  background-color: var(--color-white);
+}
 .controls .active-btn {
-  background-color: var(--color-green) !important;
+  background-color: var(--color-green);
   transition: all 0.4s ease-in-out;
 }
 .controls .active-btn i {
-  color: var(--color-white);
+  color: var(--color-black);
+}
+.controls .active-btn:hover {
+  background-color: var(--color-white);
 }
 
 /*Header-content*/
@@ -160,7 +172,7 @@ section {
   transition: all 0.4s ease-in-out;
   width: 65%;
   height: 100%;
-  background-color: var(--color-secondary);
+  background-color: var(--color-white);
   position: absolute;
   left: 0;
   top: 0;
@@ -170,8 +182,8 @@ section {
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
-  height: 90%;
-  width: 100%;
+  height: 80%;
+  width: 70%;
   margin-left: 4rem;
   transition: all 0.4s ease-in-out;
 }
@@ -212,7 +224,7 @@ section {
 }
 .about-container .right-about {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
 }
 .about-container .right-about .about-item {
@@ -472,20 +484,19 @@ section {
   border-radius: 15px;
 }
 .contact-content-con .right-contact .contact-item img {
-  margin: auto;
-  width: 99%;
-  height: 99%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
 .contact-content-con .right-contact .contact-item .hover-items {
-  width: 100%;
-  height: 100%;
+  width: 102%;
+  height: 102%;
   background-color: var(--color-secondary);
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -1%;
+  top: -1%;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -540,8 +551,10 @@ section {
 }
 
 .main-btn {
+  top: 5px;
+  font-size: 125%;
   border-radius: 30px;
-  color: inherit;
+  color: var(--color-black);
   font-weight: 600;
   position: relative;
   border: 1px solid var(--color-green);
@@ -704,7 +717,7 @@ section {
 }
 @media screen and (max-width: 1070px) {
   .about-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 2fr);
   }
   .about-container .right-about {
     grid-template-columns: 1fr;

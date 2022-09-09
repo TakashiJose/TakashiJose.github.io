@@ -112,7 +112,7 @@
 
 @media screen and (max-width: 1070px){
     .about-container{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 2fr);        
         .right-about{
             grid-template-columns: 1fr;
             padding-top: 2.5rem;
