@@ -30,6 +30,8 @@ function PageTransition(){
             const element = document.getElementById(id);
             element.classList.add('active');
         }
+
+
     })
 }
 
