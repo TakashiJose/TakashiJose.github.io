@@ -342,6 +342,45 @@ section{
     transform: scale(1);
 }
 
+/*Game*/
+.game-container{
+    display: grid;
+    transform: translateY(-100%) scale(0);
+    transition: all .4s ease-in-out;
+    background-color: var(--color-primary);
+
+    .game{
+        flex: 1;
+        width: 600px;
+        height: 200px;
+        border: 1px solid var(--color-black);
+        margin: auto;
+        #dino{
+            width: 50px;
+            height: 50px;
+            background-image: url(img/MonkBara500x500.png);
+            background-size: 50px 50px;
+    
+            position: relative;
+            top: 150px;
+            animation: jump .3s linear;
+        }
+
+        .jump{
+            animation: jump 0.3s linear;
+        }
+        @keyframes jump{
+            0%{top: 150px;}
+            30%{top:130px;}
+            50%{top: 80px;}
+            80%{top:130px;}
+            100%{top: 150px;}
+        }
+    }
+
+}
+
+
 /*Contacts*/
 .contact-content-con{
     display: flex;
